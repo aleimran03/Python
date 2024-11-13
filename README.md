@@ -338,11 +338,3 @@ Be cautious with loops that never terminate:
 while True:
     print("I'm a survivor")  # DO NOT run; it's an infinite loop
 ```
-
----
-
-We hope you find this guide useful! Happy coding!
-
---- 
-
-Feel free to adjust any sections or examples to better fit your style or the intended audience!
