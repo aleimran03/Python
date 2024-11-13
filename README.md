@@ -1,6 +1,3 @@
-Here's an enhanced version of your original content intended for an update on your GitHub page. The text has been reformatted for clarity, completeness, and engagement. Additionally, I added introduction and conclusion sections to better frame the information.
-
----
 
 # Python Basics
 
