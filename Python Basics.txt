@@ -1,0 +1,294 @@
+Python is easy to start but going further its becomes difficult
+
+1. Printing Strings
+To display content in the console, you can use the print() function.
+
+Example : print("Hello, World!")
+
+--------------------------------------------------------------------------------------------------------
+2. User Input
+You can prompt the user for input using the input() function.
+
+Example: 
+
+name = input("What's your name?: ")
+print(f"Hello, {name}!")  // here F is called as formatted String where we can use the variables in curly Braces
+
+---------------------------------------------------------------------------------------------------------------
+3. Comments
+Comments are important for documenting your code. You can add comments by using the # symbol. The interpreter ignores anything after this symbol on the same line.
+
+# This is a comment
+""" """ Comment for Paragraph
+print("This is code")  # This prints text to the console
+
+------------------------------------------------------------------------------------------------------------------------
+4. Variables
+Variables allow you to store data with a name, making it easier to manage.
+
+my_name = "Angela"  // here my_name is a variable and Angela is teh value which we have stored in my_name Variable 
+my_age = 12  
+
+--------------------------------------------------------------------------------------------------------------
+5. The += Operator
+The += operator is a shorthand for updating the value of a variable.
+
+
+my_age = 12
+my_age += 4 // (or) my_age = my_age + 4 # my_age is now 16 
+
+---------------------------------------------------------------------------------------------------------------------
+Data Types
+Understanding data types is crucial in Python programming.
+
+6. Integers
+Integers are whole numbers:
+
+my_number = 354
+
+-----------------------------------------------------------------------------------------------------------------------
+7. Floating Point Numbers
+Floats are numbers with decimals. Any division that results in a fractional number will yield a float.
+
+my_float = 3.14159
+
+--------------------------------------------------------------------------------------------------------------------------
+8. Strings
+A string is a sequence of characters, enclosed in quotes.
+
+my_string = "Hello"
+
+-------------------------------------------------------------------------------------------------------------------------
+9. String Concatenation
+Strings can be combined using the + operator, creating a new string.
+
+greeting = "Hello" + " Angela"  # Results in "Hello Angela"
+
+---------------------------------------------------------------------------------------------------------------------------
+10. Escaping Strings
+To include special characters like double quotes in strings, use the escape character "".
+
+speech = "She said: \"Hi\""
+print(speech)  # Outputs: She said: "Hi"
+
+\n  -> For new line  		Example --> print("Hello\nWorld")
+\t  -> Horizontal tab
+\\  -> Blackslash
+\'  -> for '
+\"  -> for "
+
+
+------------------------------------------------------------------------------------------------------------------------------
+11. F-Strings
+Format strings (f-strings) allow you to embed variable values directly into strings.
+
+days = 365
+print(f" There are {days} days in a year")
+
+--------------------------------------------------------------------------------------------------------------
+12. Converting Data Types
+You can convert between different data types with built-in functions: Converting to float: float() Converting to int: int() Converting to string: str()
+
+n = 354  //integer
+new_n = float(n)  # Converts to a float
+print(new_n)  # Outputs: 354.0
+
+------------------------------------------------------------------------------------------------------------------
+13. Checking Data Types
+Use the type() function to check variable data types.
+
+n = 3.14159
+print(type(n))  # Outputs: <class 'float'>
+Math Operations
+
+----------------------------------------------------------------------------------------------------------------
+14. Arithmetic Operators
+Python supports basic arithmetic operations:
+
+3 + 2  # Addition
+4 - 1  # Subtraction
+2 * 3  # Multiplication
+5 / 2  # Division
+5 ** 2  # Exponentiation
+
+----------------------------------------------------------------------------------------------------------------------
+15. The += Operator Revisited
+The += operator can be used with any arithmetic operation.
+
+my_number = 4
+my_number += 2  # Result is now 6
+
+--------------------------------------------------------------------------------------------------------------
+16. The Modulo Operator
+The modulo operator % returns the remainder of a division.
+
+remainder = 5 % 2  # Result is 1
+
+
+-------------------------------------------------------------------------------------
+17. Syntax Error
+Syntax errors occur when your code doesn't make sense to the computer. This can happen due to misspellings, an excess of brackets, or missing commas.
+
+print(12 + 4))  # SyntaxError: unmatched ')'
+
+-----------------------------------------------------------------------------------------
+18. Name Error
+This occurs when there is a variable with a name that the computer does not recognize. This is typically due to a misspelling of a variable name you created earlier. Note: Variable names are case-sensitive.
+
+my_number = 4
+print(my_Number)  # NameError: name 'my_Number' is not defined
+
+--------------------------------------------------------------------------------------------
+19. Zero Division Error
+Attempting to divide by zero will cause an error:
+
+result = 5 / 0  # ZeroDivisionError
+
+------------------------------------------------------------------------------
+
+Functions
+20. Creating Functions
+This is the basic syntax for a function in Python. It allows you to assign a name to a set of instructions, enabling you to call it multiple times without the need to rewrite or copy-paste the code. The contents of the function must be indented to indicate that they are part of the function.
+
+def greet():
+    print("Hello!")
+
+
+--------------------------------------------------------------------------------------
+21. Calling Functions
+You activate a function by calling it. This is done by writing the name of the function followed by a set of parentheses. This allows you to determine when to execute the function and how many times it should be called.
+
+def greet():
+    print("Hello!")
+greet()  # Outputs: Hello!
+
+--------------------------------------------------------------------------------------
+22. Functions with Inputs
+In addition to simple functions, you can provide inputs to the function. This allows the function to perform different actions each time it is called, depending on the provided input. This feature enhances the utility and reusability of your function.
+
+def add(n1, n2):
+    return n1 + n2
+
+result = add(2, 3)
+print(result)  # Outputs: 5
+
+-------------------------------------------------------------------------------------------
+23. Functions with Outputs
+In addition to inputs, a function can also have an output. The output value is specified using the keyword "return." This allows you to store the result from a function for further use.
+
+def add(n1, n2):
+    return n1 + n2
+
+---------------------------------------------------------------------------------------------
+24. Variable Scope
+Variables created inside a function are destroyed once the function has finished executing. The value of a variable is determined by its scope, which is defined by the location in the code where it is used. For example, if n is 2 outside the function but is assigned the value of 3 within my_function(), printing n inside the function will yield 3, whereas printing n outside the function will yield 2. This demonstrates how the scope of a variable affects its value.
+
+n = 2
+def my_function():
+    n = 3
+    print(n)  # Outputs: 3
+
+print(n)  # Outputs: 2
+
+--------------------------------------------------------------------------------------------------------
+25. Keyword Arguments
+When calling a function, you can provide either keyword arguments or positional values. Using keyword arguments allows you to specify the name of the parameter, which means you don’t have to follow the order of the parameters when providing the inputs. This can make your function calls clearer and more readable.
+
+def divide(n1, n2):
+    return n1 / n2
+
+divide(n2=5, n1=10)  # Outputs: 2.0
+
+-------------------------------------------------------------------------------------------------
+Conditions
+
+27. If Statements
+An if statement checks for a condition.
+
+n = 5
+if n > 2:
+    print("Larger than 2")
+
+--------------------------------------------------------------------------------------------------
+28. Else Statements
+Add an else statement for an alternative branch.
+
+age = 18
+if age > 16:
+    print("Can drive")
+else:
+    print("Don't drive")
+
+------------------------------------------------------------------------------------------------------
+29. Elif Statements
+Use elif to check additional conditions after an if.
+
+weather = "sunny"
+if weather == "rain":
+    print("Bring an umbrella")
+elif weather == "sunny":
+    print("Bring sunglasses")
+
+----------------------------------------------------------------------------------------------------------
+30. Logical Operators
+Use and, or, and not to combine or negate conditions.
+
+s = 58
+if s < 60 and s > 50:
+    print("Your grade is C")
+Loops
+
+s = 58
+if s < 60 or s > 50:
+    print("Your grade is C")
+Loops
+
+-----------------------------------------------------------------------------------------
+34. While Loop
+This loop continues while a condition is true.
+
+n = 1
+while n < 100:
+    n += 1
+
+
+------------------------------------------------------------------------------------
+35. For Loop
+For loops iterate over sequences like lists or ranges.
+
+all_fruits = ["apple", "banana", "orange"]
+for fruit in all_fruits:
+    print(fruit)
+
+------------------------------------------------------------------------------------
+36. Using _ in Loops
+When the value isn't needed, you can use _ to indicate it.
+
+for _ in range(100):
+    # Do something 100 times.
+Sure! Here’s an enhanced version of the provided text, formatted to be more suitable for a GitHub page update, with improved clarity and structure:
+
+
+----------------------------------------------------------------------------------------------
+37. break Keyword
+The break keyword allows you to exit a loop prematurely. It can be used in both for and while loops. Here's an example:
+
+scores = [34, 67, 99, 105]
+for s in scores:
+    if s > 100:
+        print("Invalid")
+        break
+    print(s)
+
+------------------------------------------------------------------------------------------------------
+38. continue Keyword
+The continue keyword enables you to skip the current iteration of a loop and proceed to the next iteration. The loop itself continues executing:
+
+n = 0
+while n < 100:
+    n += 1
+    if n % 2 == 0:
+        continue
+    print(n)  # Prints all odd numbers
+
+---------------------------------------------------------------------------------------------------------
