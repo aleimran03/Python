@@ -1,0 +1,564 @@
+#2D lists --> Lists made up of lists
+
+fruits = ["apple", "orange", "banana", "coconut"]
+vegetables = ["celery", "carrot", "potatoes",]
+meats = ["chicken", "fish", "turkey",]
+
+groceries = [fruits, vegetables, meats]
+
+#groceries = [["apple", "orange", "banana", "coconut"],["celery", "carrot", "potatoes",],["chicken", "fish", "turkey",]]  --> It can work like this too
+
+print(groceries[1])
+print(groceries[0][1])
+
+for collection in groceries:
+	for food in collection:
+		print(food, end=" ")
+	print()
+
+----------------------------------------------------------
+#Creating a 2 Dimensional Keypad using nested for statement
+
+for x in range(1, 4):
+  print(x, end=" ")
+else:
+  print()
+for y in range(4, 7):
+  print(y, end=" ")
+else:
+  print()
+for z in range(7, 10):
+  print(z, end=" ")
+else:
+  print()
+print("* 0 #")
+
+-------------------------------------------------------------
+
+#2D numpad using Tuples
+numpad = ((1, 2, 3), (4, 5, 6), (7, 8, 9), ("*", 0, "#"))
+
+for row in numpad:
+  for column in row:
+    print(column, end=" ")
+  print()
+
+-------------------------------------------------------
+
+questions = ("How many Elements are in periodic table?: ",
+"Which animal lays the largest eggs?: ",
+"What is the most abundant gas in Earth's atmosphere?: ",
+"How many bones are in the human body?: ",
+"Which planet in the solar system is the hottest?: ")
+
+options = (("A. 116 ", "B. 117 ", "C. 118", "D.119 "),
+("A. Whale ", "B. Crocodile", "C. Elephant", "D. Ostrich"),
+("A. Nitrogen", "B. Oxygen", "C. Carbon-Dioxide", "D. Hydrogen"),
+("A. 206", "B. 207", "C.208 ", "D. 209"),
+("A. Mercury", "B.Venus ", "C. Earth", "D. Mars"))
+
+answer = ("C", "D", "A", "A", "B")
+guesses = []
+score = 0
+question_num = 0
+
+for question in questions:
+	print("-----------------------------------------------------------")
+	print(question)
+	for option in options[question_num]
+		print(option)
+	
+	guess = input("Enter (A, B, C, D): ").upper()
+	guesses.append(guess)
+	if guess == answers[question_num]
+		score += 1
+		print("CORRECT")
+	else:
+		print("INCORRECT")
+		print(f"{answer[question_num]} is the correct answer")
+	question_num += 1
+
+print( "-----------------------------------------------------------")
+print("                       RESULTS                       ")
+print("-----------------------------------------------------------")
+
+print("answers: ", end="")
+for ans in answer:
+	print(ans, end=" ")
+print()
+
+print("guesses: ", end="")
+for guess in guesses:
+	print(guess, end=" ")
+print()
+
+score = int(score / len(questions) * 100)
+print(f"Your score is: {score}%")
+
+print("-----------------------------------------------------------")
+
+
+
+-------------------------------------------------------------------------------------------
+
+#Dictionary = a collection of {key:value}pairs
+# 		Ordered and Changeable no duplicates
+
+
+
+capitals = {"USA":"Washington DC", "India":"New Delhi", "China":"Beijing", "Russia":"Mosque",}
+
+print(dir(capitals)) #it will show all the attributes that can be used on this dictionaries
+
+print(help(capitals))
+
+print(capitals.get(USA)) # it will give the value of Washington DC as we are getting the USA details
+
+
+-----------------------------------------------------------------------------------
+
+#Program for a concession stand
+
+menu = {"pizza": 3.00,
+        "nachos": 4.00,
+        "popcorn": 6.00,
+        "fries": 2.34,
+        "chips": 2.22,
+        "pretzel": 1.47,
+        "soda": 3.94,
+        "lemonide": 2.99}
+
+cart = []
+total = 0
+
+for key, value in menu.items():
+    print(f"{key:10} : ${value:.2F}")
+
+while True:
+    food = input("Select an item (Press q to Quit) :").lower()
+    if food == "q":
+      break
+    elif menu.get(food) is not None:
+      cart.append(food)
+
+print("--------YOUR ORDER IS--------")
+
+for food in cart:
+    total += menu.get(food)
+    print(food, end=" ")
+print()
+print(f"Total Price is : ${total:.2f}")
+
+
+--------------------------------------------------------------------------------------------------
+
+#Random Programs
+
+'''
+options = ("rock", "paper", "scissor")
+
+cards = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "K", "Q", "A"]
+
+#number = random.randint(low, high) # random integer from low to high
+#number = random.random() # it will give us any float value
+#option = random.choice(options) # it will give us any single choice from options (its good for games)
+
+random.shuffle(cards) # this will shuffle the cards
+
+'''
+
+import random
+
+low = 1
+high = 100
+answer = random.randint(low, high)
+guesses = 0
+is_running = True
+
+
+print("Python Number Guessing Game")
+print(f"Select a number between {low} and {high}")
+
+while is_running:
+  guess = input("Enter your guess: ")
+
+  if guess.isdigit():
+    guess = int(guess)
+    guesses += 1
+    if guess < low or guess > high:
+      print("That number is out of range")
+      print(f"Select a number between {low} and {high}")
+    elif guess < answer:
+      print("Too Low! Try again!")
+    elif guess > answer:
+      print("Too High! Try again!")
+    else:
+      print(f"CORRECT! The answer was {answer}")
+      print(f"Number of Guesses : {guesses}")
+      is_running = False
+  else:
+    print("Invalid guess")
+    print(f"Please select a number between {low} and {high}")
+-------------------------------------------------------------------------------
+
+
+#Functions
+
+#function = A block of reusable code 
+#		place () after the function name to invoke it
+
+def happy_birthday(name, age): #it starts with def and to call the function we have to invoke it with ()
+	print(f"Happy Birthday to {name}..!")
+	print(f"You are {age} years old")
+	print("hope you have  a great future ahead") 
+
+
+happy_birthday("Imran", 29)
+happy_birthday("Ameen", 29)
+happy_birthday("Suhaib", 29)
+
+-------------------------------------------------------------------
+def display_invoice(username, amount, due_date):
+  print(f"Hello {username}, How are you...!")
+  print(f"You Total bill is ${amount:.2f} and Due date is {due_date}")
+  print()
+
+display_invoice("Mohammed", 420, "01st  Jan")
+
+----------------------------------------------------------------
+
+#return = statement used to end a function
+#		and send the result back to the caller
+
+def add(x, y):
+	z = x + y
+	return z
+
+print(add(1, 2))
+
+----------------------------------------------------
+
+def create_name(first, last)
+	first = first.capitalize()
+	last = last.capitalize()
+	return first + " " + last
+
+full_name = create_name(spongebob, squarepants)
+print(full_name)
+
+--------------------------------------------------------
+# default argument = A default value for certain parameters
+#			default is used when that argument is omitted
+#			make your functions more flexible, reduces # of arguments
+#			1. positional, 2. DEFAULT, 3. keyword, 4. arbitrary
+
+def net_price(list_price, discount=0, tax=0.05):
+  return list_price * (1 - discount) * (1 + tax)
+
+print(net_price(500))
+
+-----------------------------------------------------------
+#ARBITRARY Arguments
+
+# *args	= allows you to pass multiple non-key arguments
+# **kwargs = allows you to pass multiple keyword- arguments
+#		*unpacking operator
+#		1. positional 2. default 3.keyword 4.ARBITRARY
+
+
+def print_address(**kwargs):
+	for key, values in kwargs.item():
+		print(f"{key}: {value}")
+
+print_address(street = "Whitefield", Area = "Bangalore", city = "Bangalore", state = "Karnataka", country = "India")
+
+----------------------------------------------
+
+#Iterables = An object/collection that can return its elements one at a time,
+#		allowing it to be iterated over the loop
+
+my_dictionary = {"A": 1, "B":2, "c":3}
+
+for key, value in my_dictionary.items():
+	print(f"{key} = {value}
+
+--------------------------------------------------
+#Membership operators = used to test whether a value or variable is found in a sequence
+			(string, list, tuple, set, or dictionary)
+			1. in
+			2. not in
+
+word = "APPLE"
+
+letter = input("Enter a letter to Guess if its present or not: ")
+
+if word in letter:
+	print("The letter {letter} is present")
+else:
+	print("The letter is not found")
+
+if word not in letter:
+	print("The letter {letter} is present")
+else:
+	print("The letter is not found")
+
+----------------------------------------------------------------
+
+students = {"SpongeBob", "Patrick", "Sandy"}
+
+student = input("Enter the name of teh student")
+
+if student in students:
+	print(f" {student} is in the list")
+else:
+	print(f" Student not found")
+
+if student not in students:
+	print(f" Student not found")	
+else:
+	print(f" {student} is in the list")
+
+-------------------------------------------------------------------
+
+#List Comprehension = A concise way to create lists in python
+			compact and easier to read than traditional loops
+			[expression for value in iterable if condition]
+
+double = []
+
+for x in range(1, 11):
+	double.append(x * 2)
+print(double)
+
+#we can write in more compact way 
+
+#double [expression for value in iterable]
+doubles = [x * 2 for x in range(1, 11)]
+triple = [y * 3 for y in range(1, 11)]
+square = [z * z for z in range(1, 11)]
+
+print(f"Double is {doubles}")
+print(f"Triple is {triple}")
+print(f"Square is {square}")
+
+fruits = ["apple", "mango", "banana", "cherry", "orange"]
+fruits = [fruit.upper() for fruit in fruits]
+fruit_char = [fruit[0] for fruit in fruits]
+print(fruits)
+print(fruit_char)
+
+numbers = [-2, 2, 3, -4, 5, -6]
+
+#double [expression for value in iterable if condition]
+
+positive_numbers = [num for num in numbers if num > 0]
+negative_numbers = [num for num in numbers if num < 0]
+even_numbers = [num for num in numbers if num % 2 == 0]
+odd_numbers = [num for num in numbers if num % 2 != 0]
+
+print(f"Postive numbers are {positive_numbers}")
+print(f"Negative numbers are {negative_numbers}")
+print(f"Even Numbers are {even_numbers}")
+print(f"Odd Numbers are {odd_numbers}")
+
+grades = [27, 56, 89, 45, 67, 77, 81]
+passing_grade = [grade for grade in grades if grade >= 60]
+
+print(f"Passing grades are {passing_grade}")
+
+------------------------------------------------------------------
+
+Match-case statement (switch): An alternative to using many 'elif' statements
+				Execute some code if a value matches a 'case'
+				Benefits: cleaner and syntax is more readable
+
+
+def day_of_the_week(day):
+  match day:
+    case 0:
+      return "Its a Sunday"
+    case 1:
+      return "Its a Monday"
+    case 3:
+      return "Its a Wednesday"
+    case 4:
+      return "Its a Thursday"
+    case 5:
+      return "Its a Friday"
+    case 6:
+      return "Its a saturday"
+    case _:
+      return "Invalid day"
+print(day_of_the_week(2))
+
+----------------------------------------------------------------------
+
+#We can use and or boolean operator in match statements
+
+def is_weekend(day):
+  match day:
+    case "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday":
+      return False
+    case "Saturday" | "Sunday":
+      return True
+    case _:
+      return "Invalid day"
+print(is_weekend("Saturday"))
+
+---------------------------------------------------------------------------------
+
+#Module = a file containing code you want to include in your programs
+#		use 'import' to include a module (built-in or your own)
+#		useful to break up a large program reusable separate files
+
+#print(help("modules")) # We can see all the modules names 
+#print(help("math")) #The Best way to get the details of the module
+
+# We can create our own module by defining it in other python file and using the file name to import like if we have programs1 then import programs1
+
+#import math # here we are just importing math module
+
+#import math as m # here we are assingning m as a math module we use it if the module name is bigger
+#print(m.pi)  #here its showing pi value 
+
+#from math import pi  #here we are importing pi from math module 
+#print(pi)
+
+from math import e #We can use like this alse using only exponentioal value but in program it may effect if we want to 
+
+a, b, c, d  = 1, 2, 4, 5
+print(e)
+print(e ** a)
+print(e ** b)
+print(e ** c)
+print(e ** d)
+print(e ** e)
+
+-------------------------------------------------------------------------------------
+
+#Variable Scope = where a variable is visible and accessible
+#scope resolution = (LEGB) Local-->Enclosed-->Global-->built-in
+#first we will look for local and then  enclosed one than global and later builtin
+
+#Local -> inside the function that we cant use outside the function
+#Enclosed -> function inside function and there we have mentioned x variable that is enclosed 
+#Global -> where all the program can use the variable means defining at start 
+#Built-in
+
+from math import pi #pi is builtin variable 
+
+def fun1():
+	x = 1  #Local variable
+	print(x)
+
+	def fun2():
+		x = 2 #Enclosed variable
+		print(x)
+
+print(fun1())
+
+print(fun2())
+
+x = 3 #Global Variable
+
+-----------------------------------------------------------------
+
+if__name__ = __main__: (this script can be imported or run standalone)
+			Functions and classes in this module can be reused in another program
+			without the main block of code executing
+
+#ex. library = Import library for functionality
+#		when running library directly, display a help page
+
+Good Practice (code is modular, helps readability, avoid unintended execution)
+
+#Script1.py (filename)
+
+def do_something():
+	print("Running a million steps")
+
+if (__name__ =="__main__");  # if we are using this if statement then we are only running the 
+do_something function 
+
+print("we are coder")
+	
+do_something()
+
+
+#script2.py (filename another file)
+
+#we can import the script 1 and run the code in script 2
+'''
+from script1 import *  #we are importing everything from script1 and printing everything
+
+If we are running from the main program in out it shows as main if w ehave given print(__name__)
+If we are calling from different program it will show as the file name 
+
+-------------------------------------------------------------------------------------
+
+#Python breaking function
+
+
+
+
+from script1 import do_something()  # here we are only importing do_something functioin
+
+'''
+------------------------------------------------------------------------
+
+#python slot machine
+
+def spin_row():
+	pass
+
+def print_row():
+	pass
+
+def get_payout():
+	pass
+
+def main():
+	balance = 100
+
+print("-------------------------")
+print("Welcome to Python Slots")
+print("Symbols: 🍒🍉🍋🍌 🔔⭐")
+print("-------------------------")
+
+if__name__ == '__main__':
+
+-------------------------------
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
