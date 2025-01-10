@@ -1,0 +1,581 @@
+Program
+
+print("Hello World")
+x = 13
+y = 23
+print ("the value of total cost is ", x+y )
+
+Output:
+Hello World
+the value of total cost is 36
+
+--------------------------------------------------------------------------------------------
+
+name = "jack"
+print(name)
+
+name = "Angela"
+print(name)
+print(len(input("what is your name?")))
+
+name = input("what is your name:")
+print(len(name))
+
+Output:
+Jack
+Angela
+Whats is your name?Imran
+5
+what is your name:Mohammed
+8
+--------------------------------------------------------------------------------
+
+name = input("what is your name:")
+print(name)
+print("your length of name is",  len(name))
+
+Output:
+Mohammed Imran
+your length of name is 14
+-------------------------------------------------------
+
+glass1 = "milk"
+glass2 = "ice"
+#changing the variables
+temp1 = glass1
+glass1 = glass2
+glass2 = temp1
+
+print((glass1),(glass2))
+
+ice milk
+
+---------------------------------------------------------------
+
+print("Welcome to the band name generator")
+name1 = (input("Whats the name of the city you have grew in :\n"))
+name2 = ( input("Whats your Pet name :\n"))
+print("your band name could be", name1, name2)
+
+Output:
+Welcome to the band name generator
+your band name could be Bangalore Dragon
+------------------------------------------------------------------------------------
+
+print("Hello"[-2]) #Print Hello of Zero Place ( 0 from start and -1 from backwards )
+print("123" + "234") #Concatination of two string
+print(234 + 255) # Integer equals whole numbers
+print(234_255_267) #Large integer numbers
+print(3.134) #Floating point number
+print(True)
+print(False) #Boolean Data Type
+
+Output:
+
+l
+123234
+489
+234255267
+3.134
+True
+False
+
+---------------------------------------------------------------------------------------
+
+print(len("Hello"))
+print(type("Hello"))
+print(type(2345))
+print(type(3.145))
+print(type(True))
+
+Output:
+5
+<class 'str'>
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+-------------------------------------------------------------------------------------
+
+print("456" + "956")
+print (int("234") + int("456"))
+
+Output:
+456956
+690
+
+-------------------------------------------------------------------------------------
+
+
+name = input("Enter youe name")
+length = len(name)
+print("The words in your name is" , length)
+print(type("Number of letters in your name"))
+print(type(length))
+
+Output:
+
+The words in your name is 14
+<class 'str'>
+<class 'int'>
+
+-------------------------------------------------------------------------------------
+
+name = input("Enter your name:")
+length = len(name)
+
+print(type("Number of letters in your name"))
+print(type(length))
+
+print("Number of letters in your name", str(length))
+
+Output:
+<class 'str'>
+<class 'int'>
+Number of letters in your name 15
+
+---------------------------------------------------------------------------
+
+#Boolean Data types
+a = True
+b = False
+print(int(a))
+print(int(b))
+if (int(a)==0):
+    print("This is not a zero type integer")
+else:
+    print("This is my program and i will write the shit what i want")
+print(a)
+print(b)
+print(type(a))
+print(type(b))
+
+Output:
+1
+0
+This is my program and i will write the shit what i want
+True
+False
+<class 'bool'>
+<class 'bool'>
+
+------------------------------------------------------------------------------------------------
+
+#One line if statement  
+temp = 19
+access = "admin"
+weather = "HOT" if temp > 20 else "COLD" # One Line IF statement 
+print(f"Todays Temperature is {weather}")
+
+access_level = "FULL ACCESS" if access == "admin" else "LIMITED_ACCESS"  # One Line IF statement 
+print(f"You have an {access_level}")
+
+------------------------------------------------------------------
+12 characters
+no space 
+no digits
+
+username = str(input("Enter the username of the user: "))
+if username.len == 12 and username = username.find(" ") and 
+	
+-------------------------------------------------------------
+
+#indexing = accessing elements of a sequence using [] (indexing operations)
+#	[start : end : step]
+
+------------------------------------------------------------
+
+name.isalpha()
+name.isnumeric()
+
+----------------------------------------------------------
+1. isalnum()
+
+Checks if all characters in the string are alphanumeric (letters or numbers).
+
+
+my_string = "Hello123"
+if my_string.isalnum():
+    print("The string contains only alphanumeric characters.")
+else:
+    print("The string contains non-alphanumeric characters.") 
+
+--------------------------------------------------------------------
+2. isdigit()
+
+Checks if all characters in the string are digits (0-9).
+
+my_string = "123"
+if my_string.isdigit():
+    print("The string contains only digits.") 
+-----------------------------------------------------------------------
+3. isspace()
+
+Checks if all characters in the string are whitespace characters (spaces, tabs, newlines).
+
+my_string = "   " 
+if my_string.isspace():
+    print("The string contains only whitespace characters.")
+--------------------------------------------------------------------
+4. islower()
+
+Checks if all characters in the string are lowercase letters.
+
+my_string = "hello"
+if my_string.islower():
+    print("The string contains only lowercase letters.")
+
+-------------------------------------------------------------------
+5. isupper()
+
+Checks if all characters in the string are uppercase letters.
+
+my_string = "HELLO"
+if my_string.isupper():
+    print("The string contains only uppercase letters.")
+
+------------------------------------------------------------------
+6. istitle()
+
+Checks if the string is in title case (first character of each word is uppercase, the rest are lowercase).
+
+my_string = "Hello World"
+if my_string.istitle():
+    print("The string is in title case.")
+-----------------------------------------------------------------
+
+username = input("Enter the username of the user :")
+
+if len(username) > 12:
+	print("Username should not contain more than 12 characters")
+elif not username.find(" ") == -1:
+	print("Username should not contain space")
+elif not username.isalpha():
+	print("Username should not contain digits")
+else:
+	print(f"Welcome {username}")
+----------------------------------------------------------------------
+
+#indexing = accessing elements of a sequence using [] (indexing operations)
+#	[start : end : step]
+
+credit_number = "1234-3423-3456-2343"
+print(credit_number[0]) #prints first number
+print(credit_number[0:4]) # Prints from 0 to 3
+print(credit_number[5:9]) # Prints from 5 to 9
+print(credit_number[:4]) # if we dont defines also it will execute form 0 to 4
+print(credit_number[5:]) # if we dont define the last index it will execute from 5 to last number
+print(credit_number[-1]) # Prints from last
+print(credit_number[::4]) # Prints every second character
+credit_number = credit_number[::-1]
+print(f"The Vise Versa Credit Number is {credit_number}")
+
+--------------------------------------------------------------------------------------
+
+Format Specifiers = {value:flags} format a value based on what flags are inserted
+
+# .(number)f = round to that many decimal places (fixes point)
+# :(number) = allocate that many spaces
+# :03 = allocate and zero pad that many spaces
+# :< = left justify
+# :> = right justify
+# :^ = center align
+# :+ = use a plus sign to indicate positive value
+# := = place sign to leftmost position
+# : = insert a space before positive numbers
+# :, = comma separator
+
+----------------------------------------------------
+
+price1 = 3000.14159
+price2 = -987.65
+price3 = 12.34
+print(f"Price1 is ${price1 :.1f}")
+print(f"Price2 is ${price2 :+1f}")
+print(f"Price3 is ${price3 :.1f}")
+print(f"Price1 is ${price1 :10}") #10 digits
+print(f"Price1 is ${price1 :010}") #0 padded with 10
+print(f"Price1 is ${price1 :<10}") #left justified with 10 digits
+print(f"Price1 is ${price1 :>10}") #right justified with 10 digits
+print(f"Price1 is ${price1 :^10}") #Center justified with 10 digits
+print(f"Price1 is ${price1 :+}") #any positive value will be shown as + sign and _ve one will not show + sign
+print(f"Price1 is ${price2 :+}") #any positive value will be shown as + sign and _ve one will not show - sign
+print(f"Price1 is ${price1 :,}") #will put , it can be only use if there are three digits Ex: 3000.00 not like 30.00 
+print(f"Price1 is ${price1 :+,.2f}") # added + , and .2f 
+
+-----------------------------------------------------------------------------------
+
+While Loop = execute some code while come condition remains true
+
+ # we are using while statement in place of if statemnet
+name = input("Enter your name :")
+#if name == "":
+#	print("You did not enter your name")
+#else:
+#	print(f"your name is {name}")
+
+while name == "":
+  print("You did not enter your name")
+  name = input("Please Enter your name :")
+print(f"your name is {name}")
+
+----------------------------------------------------------------------------------------
+
+age = int(input("Enter your age :"))
+
+while age > 0:
+	print("Age can't be negative")
+	age = int(input("Enter your age :"))
+print(f"You are {age} years old")
+
+--------------------------------------------------------------------------------------
+#Example 2 on While loop
+food = input("Enter the food you like (q to exit) :")
+
+while not food == 'q':
+  print(f"You like {food}")
+  food = input("Enter the another food you like :")
+print("Bye Take care")
+
+------------------------------------------------------------------------------------
+#Example 3 on While loop
+num = int(input("Enter the number greater than 1 and less than 10 :"))
+
+while num < 0 or num > 10:
+  print(f"Not a valid Number")
+  num = int(input("Please Enter the number greater than 1 and less than 10 :"))
+print(f"Entered number is {num}")
+	
+---------------------------------------------------------------------------------
+
+principal = 0
+rate = 0
+time = 0
+
+while principal <= 0:
+  principal = float(input("Please Enter the Principal amount greater than 0 :"))
+  print(f"Principal amount is {principal}")
+while rate <= 0:
+  rate = float(input("Please Enter the Interest Rate can't be less than zero :"))
+  print(f"Interest Rate is {rate}")
+while time <= 0:
+  time = int(input("Enter the time that cant be less than zero :"))
+  print(f"Time is {time} years")
+
+total = principal * pow((1 + rate / 100), time)
+print(f"Balance after {time} years: ${total:.2f}")
+
+------------------------------------------------------------------------------------
+
+#Same Program with different format
+#If we are  using True while then the statement will continue infinite times so for that we need break 
+
+principal = 0
+rate = 0
+time = 0
+
+while True:
+  principal = float(input("Please Enter the Principal Amount  :"))
+  if principal < 0: 
+    print(f"Please Enter Principal amount Greater than 0")
+  else:
+    break
+while True:
+  rate = float(input("Please Enter the Interest Rate :"))
+  if rate < 0:
+    print(f"Please Enter Interest Rate is greater tha  0")
+  else:
+    break
+while True:  
+  time = int(input("Enter the time :"))
+  if time < 0:
+    print(f"Time should be greater than zero")
+  else:
+    break
+
+total = principal * pow((1 + rate / 100), time)
+print(f"Balance after {time} years: ${total:.2f}")
+
+--------------------------------------------------------------------
+
+#For Statement
+
+#for loops = execute a block of code a fixed number of times.
+#We can iterate over a range, string, sequesnce, etc
+
+for x in range(1, 11):
+	print(x)
+
+for x in reversed(range(1, 11)):
+	print(x)
+
+for x in reversed(range(1, 11, 3)): #(start , end, in 3 times)
+	print(x)
+
+credit_card = "1234-3454-2333-2367"
+
+for x in credit_card: 
+	print(x)
+
+for x in range(1, 21):
+	if x == 13:
+		continue #Skipping number 13
+	else:
+		print(x)
+
+------------------------------------------------------------------------
+
+nested loop = a loop within another loop (outer, inner)
+		outer loop:
+			inner loop:
+
+#While inside while loop or for loop inside for loop
+
+while x > 0:
+	while y > 0:
+		print("do something")
+
+
+# while (inside for loop) or for loop (inside while loop)
+
+for x in range(1, 10):
+  print(x, end=".")  #for each print it will print in a new line by using end and assigning it with empty it wil print in a single line
+
+---------------------------------------------------------------------------------------
+
+#Nested loop 
+
+for x in range(15):
+  for y in range(1, 10):
+    print(y, end=".")  #for each print it will print in a new line by using end and assigning it with empty it wil print in a single line
+  print()
+
+------------------------------------------------------------------------------------
+
+rows = int(input("Enter the # of rows :"))
+column = int(input("Enter the # of column :"))
+symbol = input("Enter the Symbol :")
+
+for x in range(rows)
+	for y in range(column)
+		print(symbol, end=".")
+	print()
+
+---------------------------------------------------------------------------------
+
+#Collection = single "variable" used to store multiple values
+#	Lists = [] ordered and changeable. Duplicates OK
+#	Set = {} unordered and immutable, but add/remove OK. No duplicate
+#	Tuple = () ordered and unchangeable. Duplicates OK. Faster
+
+
+-----------------------------------------------------------
+
+LISTS
+
+#LISTS and its formats that we will use in the python
+
+fruits = ["orange", "banana", "pineapple", "apple", "strawberry"]
+#print(help(fruits)) # it will show all the functions that we can executes in lists
+#print(fruits[0:3]) # lists the items from 0 till 3 
+#print(dir(fruits)) #lists valid attributes
+#print(len(fruits)) # it shows the length of the lists
+#print("apple" in fruits) #it checks whether that item is in lists its gives boolean value
+#fruits[0] = "mango"  # to chnage the list values
+fruits.append("mango") # to add an element at the end of the lists
+fruits.remove("mango") # to remove an item from the list
+fruits.insert(0, "mango") # it add another value in the list 
+#fruits.sort() # it sorts from alphabatical orders
+#fruits.reverse() # to reverse the lists not an alphabetical order the order which we placed them
+#if we want to reverse in alphabetical order first sort then reverse the lists
+#fruits.clear() # to clear all the lists
+#print(fruits.index("apple"))  # TO list the index of the list item
+print(fruits.count("banana"))
+
+for fruit in fruits:
+	print(fruit, end=", ")
+
+------------------------------------------------------------------------------------------------
+
+
+#SETS Set = {} unordered and immutable, but add/remove OK. No duplicate
+
+
+fruits = {"orange", "banana", "pineapple", "apple", "strawberry"}
+
+#print(help(fruits)) # it will show all the functions that we can executes in lists
+#print(dir(fruits)) #lists valid attributes
+#print(len(fruits)) # it shows the length of the lists
+#print(fruits[0:3]) # We cant use indexing in sets it will give type error
+#fruits.add("mango") # we are adding mango to the sets
+#fruits.remove("apple") # we are removing apple from sets fruits
+print("apple" in fruits) #it checks whether that item is in lists its gives boolean value
+#fruits.pop() # remove one item from the sets cant say which one
+#fruits.clear() #to clear all the iteams in the fruits
+print(fruits)
+
+--------------------------------------------------------------------------------------------
+
+#TUPLE	Tuple = () ordered and unchangeable. Duplicates OK. Faster
+
+fruits = ("orange", "banana", "pineapple", "apple", "strawberry")
+#print(help(fruits)) # it will show all the functions that we can executes in lists
+#print(dir(fruits)) #lists valid attributes
+#print(len(fruits)) # it shows the length of the lists
+#print("pineapple" in fruits) ##it checks whether that item is in lists its gives boolean value
+#print(fruits.index("apple")) # it will show the index value
+print(fruits.count("orange")) # it counts the values as duplicates are OK in Tuples
+#this are iterable can use for loop
+
+print(fruits)
+for x in fruits:
+  print(x, end=" ")
+
+-----------------------------------------------------------------------------------------------
+
+#Example Program using lists
+
+#Shopping Cart
+
+foods = []
+prices = []
+total = 0
+
+while True:
+  food = input("Enter the food to buy (Press q to exit) :")
+  if food.lower() == "q":
+      break
+  else:
+    price = float(input("Enter the proce of the food in $ :"))
+    foods.append(food)
+    prices.append(price)
+
+print("----------Your Cart-------------------- ")
+for food in foods:
+  print(food, end=", ")
+
+for price in prices:
+  total = total + price
+print()
+
+for price in prices:
+  print(f"${price}", end=", ")
+print()
+print(f"Your Total Price is ${total}")
+
+-----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
